@@ -1,0 +1,8 @@
+The programming education system (TPES) will teach middle school students the 
+basics of programming. This service will offer comprehensive lessons and 
+activities allowing students to acquire basic programming skills through an 
+interactive medium as opposed to many current static-based lessons offered.
+TPES aims to peek interest in programming at a younger age and replace the 
+non-interactive forms of self-education programming lessons, by presenting
+lessons in as easy-to-understand, immersive form factor that will allow
+any student to pick up and begin learning.
