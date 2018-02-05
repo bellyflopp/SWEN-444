@@ -1,0 +1,18 @@
+<mat-toolbar>
+  <span>TPES</span>
+  <!-- This fills the remaining space of the current row -->
+  <span class="filler"></span>
+  <span>
+    <ng-container *ngIf="isLoggedIn">
+      <button mat-button [matMenuTriggerFor]="loginMenu">{{user.username}}</button>
+      <mat-menu #loginMenu="matMenu">
+        <button mat-menu-item>Update Profile</button>
+        <button mat-menu-item>Logout</button>
+      </mat-menu>
+    </ng-container>
+    <ng-container *ngIf="!isLoggedIn">
+      <button mat-button (click)="goToLoginPage()">Login</button>
+      <button mat-button (click)="goToRegisterPage()">Register</button>
+    </ng-container>
+  </span>
+</mat-toolbar>
