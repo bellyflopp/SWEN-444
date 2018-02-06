@@ -1,0 +1,2 @@
+Completed WAAD, Interactive Design Requirments, and Usability Requirements.
+Set up project skeleton for angular js project.
