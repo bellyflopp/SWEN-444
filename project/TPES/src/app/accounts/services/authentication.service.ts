@@ -17,7 +17,10 @@ export class AuthenticationService {
   }
 
   isLoggedIn() {
-    return this.helper.decodeToken() !== null && !this.helper.isTokenExpired();
+    const token = localStorage.getItem('token');
+    if (token) {
+      return !this.helper.isTokenExpired(token);
+    }
   }
 
   getJSONHeaders() {
