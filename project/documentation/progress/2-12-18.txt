@@ -1,6 +1,0 @@
-- Held our weekly meeting in the library and completed work on the Deliverable 3.
-- Made Social Model Diagram in LucidChart for our TPES system
-- Added 2 more HTA on top of the 3 we did in class to make a total of 5 HTA 
-- Added a total of 5 usage scenarios for student(Olivia) and teacher(Mrs. Angular)
-- Updated existing work roles 
-- Updated workflow diagram

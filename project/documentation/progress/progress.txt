@@ -1,0 +1,28 @@
+Chris Lim
+Kyle Kaniecki
+Justin Liu
+
+1-18-18:
+- Formed team and chose team idea.
+- Began system statement.
+
+1-23-18:
+- Completed system statement.
+- Began prepping interview questions.
+- Added survey form.
+
+2-1-18:
+- Completed WAAD.
+- Began requirements doc and deliverable 2.
+
+2-5-18:
+- Completed WAAD, Interactive Design Requirments, and Usability Requirements.
+- Set up project skeleton for angular js project.
+
+2-12-18:
+- Held our weekly meeting in the library and completed work on the Deliverable 3.
+- Made Social Model Diagram in LucidChart for our TPES system
+- Added 2 more HTA on top of the 3 we did in class to make a total of 5 HTA 
+- Added a total of 5 usage scenarios for student(Olivia) and teacher(Mrs. Angular)
+- Updated existing work roles 
+- Updated workflow diagram
