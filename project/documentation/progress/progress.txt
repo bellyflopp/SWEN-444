@@ -26,3 +26,7 @@ Justin Liu
 - Added a total of 5 usage scenarios for student(Olivia) and teacher(Mrs. Angular)
 - Updated existing work roles 
 - Updated workflow diagram
+
+2-27-18:
+- Held weekly meeting to discuss Deliverable 4
+- Completed Deliverable 4, including mental model, story boards, etc.
