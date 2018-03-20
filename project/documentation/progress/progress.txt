@@ -30,3 +30,8 @@ Justin Liu
 2-27-18:
 - Held weekly meeting to discuss Deliverable 4
 - Completed Deliverable 4, including mental model, story boards, etc.
+
+3-19-18
+- Held our weekly meeting in project rooms to discuss and complete Deliverable 4
+- Created detailed design using MarvelApp
+- Starting to code in Angular for our prototype
