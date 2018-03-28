@@ -19,6 +19,14 @@ import { BaseComponent } from './components/pages/base/base.component';
     MatButtonModule,
     BaseRoutingModule
   ],
-  declarations: [NavbarComponent, HomeComponent, NotFoundComponent, BaseComponent]
+  declarations: [
+    NavbarComponent,
+    HomeComponent,
+    NotFoundComponent,
+    BaseComponent
+  ],
+  exports: [
+    NavbarComponent
+  ]
 })
 export class BaseModule { }

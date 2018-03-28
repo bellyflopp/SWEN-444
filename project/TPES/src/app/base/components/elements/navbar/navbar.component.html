@@ -1,13 +1,18 @@
-<mat-toolbar>
-  <span>TPES</span>
+<mat-toolbar class="navbar" [color]="'primary'">
+  <span>
+    <button mat-flat-button [routerLink]="['/']">TPES</button>
+  </span>
+  <span>
+    <button mat-flat-button [routerLink]="['/lessons']">Lessons</button>
+  </span>
   <!-- This fills the remaining space of the current row -->
   <span class="filler"></span>
   <span>
     <ng-container *ngIf="isLoggedIn">
-      <button mat-button [matMenuTriggerFor]="loginMenu">{{user.username}}</button>
+      <button mat-button [matMenuTriggerFor]="loginMenu">{{user?.username}}</button>
       <mat-menu #loginMenu="matMenu">
         <button mat-menu-item>Update Profile</button>
-        <button mat-menu-item>Logout</button>
+        <button mat-menu-item (click)="logoutUser()">Logout</button>
       </mat-menu>
     </ng-container>
     <ng-container *ngIf="!isLoggedIn">

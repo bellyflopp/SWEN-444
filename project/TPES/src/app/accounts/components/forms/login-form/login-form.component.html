@@ -1,0 +1,16 @@
+<form [formGroup]="form">
+  <mat-form-field style="width: 100%">
+    <input matInput [placeholder]="'Username'" formControlName="username">
+    <mat-error *ngIf="username.hasError('required')">
+      You must enter a username!
+    </mat-error>
+  </mat-form-field>
+  <br/>
+  <mat-form-field style="width: 100%">
+    <input matInput [placeholder]="'Password'" formControlName="password">
+    <mat-error *ngIf="password.hasError('required')">
+      You must enter a password!
+    </mat-error>
+  </mat-form-field>
+</form>
+<button mat-raised-button [color]="'primary'" (click)="submitForm()" [disabled]="!form.valid">Login</button>

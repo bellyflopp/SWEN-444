@@ -8,15 +8,15 @@ import {Router} from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+  user: any = null;
   isLoggedIn = false;
-  user = {
-    username: 'Testing'
-  };
   constructor(private authService: AuthenticationService, private router: Router) { }
 
   ngOnInit() {
     this.isLoggedIn = this.authService.isLoggedIn();
+    if (this.authService.isLoggedIn()) {
+      this.user = this.authService.currentUser();
+    }
   }
 
   goToLoginPage() {
@@ -24,7 +24,12 @@ export class NavbarComponent implements OnInit {
   }
 
   goToRegisterPage() {
-    this.router.navigate(['register']);
+    this.router.navigate(['/register']);
   }
 
+  logoutUser() {
+    this.authService.logout();
+    this.user = null;
+    this.isLoggedIn = false;
+  }
 }

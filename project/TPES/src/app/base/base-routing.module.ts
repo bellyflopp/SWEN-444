@@ -6,14 +6,6 @@ import {HomeComponent} from './components/pages/home/home.component';
 import {NotFoundComponent} from './components/pages/not-found/not-found.component';
 
 const baseRoutes: Routes = [
-  {
-    path: '',
-    component: HomeComponent
-  },
-  {
-    path: '**',
-    component: NotFoundComponent
-  }
 ];
 
 @NgModule({

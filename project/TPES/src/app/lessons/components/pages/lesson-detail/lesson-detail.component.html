@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+
+<div class="container justify-content-center">
+  <div class="col-12">
+    <ng-container *ngIf="type==='javascript'">
+      <h1 align="center">Lesson : Javascript</h1>
+    </ng-container>
+    <ng-container *ngIf="type==='css'">
+      <h1 align="center">Lesson : CSS 3</h1>
+    </ng-container>
+    <ng-container *ngIf="type==='html'">
+      <h1 align="center">Lesson : HTML</h1>
+    </ng-container>
+  </div>
+  <div class="col-12">
+    <mat-list>
+      <ng-container *ngIf="type==='javascript'">
+        <mat-list-item *ngFor="let item of javascript_items">
+          <div class="container col-12 justify-content-center">
+            <h1 align="center">{{item}}</h1>
+          </div>
+        </mat-list-item>
+      </ng-container>
+      <ng-container *ngIf="type==='css'">
+        <mat-list-item *ngFor="let item of css_items">
+          <div class="container col-12 justify-content-center">
+            <h1 align="center">{{item}}</h1>
+          </div>
+        </mat-list-item>
+      </ng-container>
+      <ng-container *ngIf="type==='html'">
+        <mat-list-item *ngFor="let item of html_items">
+          <div class="container col-12 justify-content-center">
+            <h1 align="center">{{item}}</h1>
+          </div>
+        </mat-list-item>
+      </ng-container>
+    </mat-list>
+  </div>
+</div>

@@ -10,6 +10,8 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { AppComponent } from './app.component';
 import {BaseModule} from './base/base.module';
 import {AuthenticationService} from './accounts/services/authentication.service';
+import {AccountsModule} from './accounts/accounts.module';
+import {HomeComponent} from './base/components/pages/home/home.component';
 
 
 
@@ -20,14 +22,18 @@ import {AuthenticationService} from './accounts/services/authentication.service'
   imports: [
     BrowserModule,
     NoopAnimationsModule,
+    AccountsModule,
     BaseModule,
     RouterModule.forRoot([
-        {
-          path: '',
-          loadChildren: './base/base.module#BaseModule'
-        }
-    ]
-    ),
+      {
+        path: '',
+        component: HomeComponent
+      },
+      {
+        path: 'lessons',
+        loadChildren: './lessons/lessons.module#LessonsModule'
+      }
+    ]),
     HttpClientModule,
     CommonModule,
     FlexLayoutModule,
