@@ -1,13 +1,13 @@
 <form [formGroup]="form">
   <mat-form-field style="margin-top: 10px; width: 100%">
-    <input matInput [placeholder]="'Username'" formControlName="username">
+    <input matInput [placeholder]="'Username'" formControlName="username" (keydown.enter)="submitForm()">
     <mat-error *ngIf="username.hasError('required')">
       Please enter a username.
     </mat-error>
   </mat-form-field>
   <br/>
   <mat-form-field style="margin-top: 15px; width: 100%">
-    <input matInput type="password" [placeholder]="'Password'" formControlName="password">
+    <input matInput type="password" [placeholder]="'Password'" formControlName="password" (keydown.enter)="submitForm()">
     <mat-error *ngIf="password.hasError('required')">
       Please enter a password.
     </mat-error>

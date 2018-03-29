@@ -14,6 +14,10 @@ import {AccountsModule} from './accounts/accounts.module';
 import {HomeComponent} from './base/components/pages/home/home.component';
 
 
+export function getToken() {
+    return localStorage.getItem('token');
+}
+
 
 @NgModule({
   declarations: [
@@ -39,9 +43,7 @@ import {HomeComponent} from './base/components/pages/home/home.component';
     FlexLayoutModule,
     JwtModule.forRoot({
       config: {
-        tokenGetter: () => {
-          return localStorage.getItem('token');
-        },
+        tokenGetter: getToken,
         whitelistedDomains: ['localhost:4200']
       }
     })
