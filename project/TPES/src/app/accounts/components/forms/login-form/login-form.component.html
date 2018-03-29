@@ -2,14 +2,14 @@
   <mat-form-field style="margin-top: 10px; width: 100%">
     <input matInput [placeholder]="'Username'" formControlName="username">
     <mat-error *ngIf="username.hasError('required')">
-      You must enter a username!
+      Please enter a username.
     </mat-error>
   </mat-form-field>
   <br/>
   <mat-form-field style="margin-top: 15px; width: 100%">
     <input matInput type="password" [placeholder]="'Password'" formControlName="password">
     <mat-error *ngIf="password.hasError('required')">
-      You must enter a password!
+      Please enter a password.
     </mat-error>
   </mat-form-field>
   <mat-error class="invalidLogin" *ngIf="form.hasError('invalid')">
