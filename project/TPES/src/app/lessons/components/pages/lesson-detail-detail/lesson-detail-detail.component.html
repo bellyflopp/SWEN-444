@@ -1,0 +1,68 @@
+<app-navbar></app-navbar>
+<div class="row col-12 align-items-center justify-content-center">
+  <h1 align="center">Lesson 1: Javascript Syntax</h1>
+</div>
+<div class="row col-12 align-items-center justify-content-center" style="margin-top: 10px; height: 60vh">
+  <div class="container col-6 align-items-center justify-content-center">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <h3 *ngIf="class === 'javascript'">Javascript Variables</h3>
+          <h3 *ngIf="class === 'css'">Javascript Variables</h3>
+          <h3 *ngIf="class === 'html'">HTML Tags</h3>
+        </mat-card-title>
+        <mat-card-subtitle>
+          Working with dynamic data
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>To create a variable in Javascript, you will need to "declare" the variable.</p>
+        <code>var x = 0;</code>
+        <p>
+          There are also other ariables that you can declare other than numbers. To declare a list of objects, use
+          an array object.
+        </p>
+        <code>var myList = [];</code>
+        <p>
+          You can also statically declare strings in javascript. You do it like this.
+        </p>
+        <code>var myString = "Hello, world!";</code>
+        <p>And remembers, <b>ALL</b> Javscript code statements end in a semicolon!</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="container col-6 align-items-center justify-content-center">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <h3>Your turn</h3>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <ng-container *ngIf="class === 'javascript'">
+          <p>Try creating variables below. Create a variable called 'temp' and initialize it to 0.</p>
+          <div style="display: flex; flex-direction: row" *ngIf="form">
+            <form [formGroup]="form">
+              <mat-form-field>
+                <input matInput [placeholder]="'Your code'" [formControlName]="'userCode'">
+                <mat-error *ngIf="userCode.hasError('endsWith')">
+                  You must include a semicolon at the end of your statement!
+                </mat-error>
+                <mat-error *ngIf="userCode.hasError('startsWith')">
+                  You forgot to begin your statement with 'var'!
+                </mat-error>
+                <mat-error *ngIf="userCode.hasError('variableName')">
+                  You didn't name your variable 'temp'!
+                </mat-error>
+                <mat-error *ngIf="userCode.hasError('equals')">
+                  You forgot the equals sign!
+                </mat-error>
+              </mat-form-field>
+            </form>
+            <button mat-raised-button [color]="'primary'" (click)="submitCode()" style="margin-left: 10px">Submit</button>
+          </div>
+        </ng-container>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

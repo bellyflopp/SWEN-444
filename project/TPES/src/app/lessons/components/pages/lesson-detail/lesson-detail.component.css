@@ -1,1 +1,28 @@
+.lesson-title, .lesson-title-disabled {
+  border-radius: 5px;
+  border-style: solid;
+  cursor: pointer;
+}
 
+.lesson-title {
+  background-color: lightgreen;
+  border-color: green;
+}
+
+.lesson-title-disabled {
+  background-color: lightgrey;
+  border-color: grey;
+}
+mat-icon.big-icon {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 50px;
+}
+
+mat-icon.done {
+  color: green;
+}
+mat-icon.not-done {
+  color: grey;
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-lesson-detail',
@@ -26,15 +26,24 @@ export class LessonDetailComponent implements OnInit {
     'Advanced CSS Attributes'
   ];
   html_items = [
-
+    'HTML Tags',
+    'HTML div Tag',
+    'HTML Lists',
+    'HTML Images'
   ];
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.route.paramMap
       .subscribe(params => {
         this.type = params.get('type');
       });
+  }
+
+  goToLessonDetailDetail(first: boolean) {
+    if (first) {
+      this.router.navigate(['/lessons', this.type, 'details']);
+    }
   }
 
 }
