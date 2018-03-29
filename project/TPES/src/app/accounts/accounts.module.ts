@@ -16,6 +16,7 @@ import {BaseModule} from '../base/base.module';
 import { ClassDetailComponent } from './components/pages/class-detail/class-detail.component';
 import { StudentDetailComponent } from './components/pages/student-detail/student-detail.component';
 import {MatSelectModule} from '@angular/material/select';
+import { AuthguardGuard } from './guards/authguard.guard';
 
 
 
@@ -41,5 +42,7 @@ import {MatSelectModule} from '@angular/material/select';
     ClassDetailComponent,
     StudentDetailComponent
   ],
+  providers: [
+  ]
 })
 export class AccountsModule { }

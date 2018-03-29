@@ -1,12 +1,17 @@
 <mat-toolbar class="navbar" [color]="'primary'">
   <span>
-    <button mat-flat-button [routerLink]="['/lessons']">TPES</button>
+    <ng-container *ngIf="isStaff">
+      <button mat-flat-button [routerLink]="['/teacher-console']">TPES</button>
+    </ng-container>
+    <ng-container *ngIf="!isStaff">
+        <button mat-flat-button [routerLink]="['/lessons']">TPES</button>
+      </ng-container>
   </span>
   <span *ngIf="isStaff">
     <button mat-flat-button [routerLink]="['/teacher-console']">Dashboard</button>
   </span>
   <span>
-    <ng-container *ngIf="isLoggedIn">
+    <ng-container *ngIf="isLoggedIn && !isStaff">
       <button mat-button [routerLink]="['/lessons']">Lessons</button>
     </ng-container>
   </span>

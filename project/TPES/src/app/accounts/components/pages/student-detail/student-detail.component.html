@@ -1,9 +1,10 @@
 <app-navbar></app-navbar>
 
 <div class="col-12 align-items-center justify-content-center" style="height: 80vh">
+  <h1 align="center">Student Progress</h1>
   <div class="container col-6">
     <mat-form-field>
-      <mat-select (selectionChange)="changeClassFilter($event.value)" [value]="class">
+      <mat-select (selectionChange)="changeClassFilter($event.value)" [value]="class" [placeholder]="'Lesson'">
         <mat-option [value]="'javascript'">Javascript</mat-option>
         <mat-option [value]="'css'">CSS</mat-option>
         <mat-option [value]="'html'">HTML</mat-option>
@@ -21,7 +22,7 @@
         </mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
-        <div class="row">
+        <div class="row justify-content-between">
           <mat-list>
             <mat-list-item>Quiz Scores:</mat-list-item>
             <ng-container *ngIf="class === 'javascript'">
@@ -48,11 +49,11 @@
           </mat-list>
           <mat-list>
             <mat-list-item>Lesson Completion:</mat-list-item>
-            <mat-list-item *ngIf="class === 'javascript'">4 Classes completed</mat-list-item>
+            <mat-list-item *ngIf="class === 'javascript'">4 Topics completed</mat-list-item>
             <mat-list-item *ngIf="class === 'javascript'">Average Score: 80%</mat-list-item>
-            <mat-list-item *ngIf="class === 'css'">3 Classes completed</mat-list-item>
+            <mat-list-item *ngIf="class === 'css'">3 Topics completed</mat-list-item>
             <mat-list-item *ngIf="class === 'css'">Average Score: 74%</mat-list-item>
-            <mat-list-item *ngIf="class === 'html'">4 Classes completed</mat-list-item>
+            <mat-list-item *ngIf="class === 'html'">4 Topics completed</mat-list-item>
             <mat-list-item *ngIf="class === 'html'">Average Score: 58%</mat-list-item>
           </mat-list>
         </div>

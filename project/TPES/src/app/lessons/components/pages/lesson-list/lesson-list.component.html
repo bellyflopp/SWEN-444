@@ -1,4 +1,7 @@
 <app-navbar></app-navbar>
+<div class="container col-12">
+  <h1 align="center">Select Your Lesson</h1>
+</div>
 <div class="container col-md-12">
   <mat-grid-list [cols]="2" rowHeight="350" gutterSize="50">
     <mat-grid-tile>
@@ -20,7 +23,7 @@
       </button>
     </mat-grid-tile>
     <mat-grid-tile style="margin-top: -75px">
-      <button [routerLink]="['website']">
+      <button [routerLink]="['website']" [disabled]="true">
           <img id="website" class="tileImg" src="/assets/html_css_js.png">
           <div matTooltip="You must complete the other courses first!"></div>
           <h2 style="margin-left: 10px; text-align: right">Build your own website</h2>
