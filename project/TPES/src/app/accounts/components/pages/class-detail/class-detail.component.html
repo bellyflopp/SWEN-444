@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+
+<div class="container col-12">
+  <h1 align="center">Class: {{className}}</h1>
+</div>
+<div class="container col-12">
+  <h1 align="center">Class Participants</h1>
+</div>
+<div class="col-12 container">
+  <div class="col-12">
+    <mat-list>
+        <mat-list-item *ngFor="let item of students; let even = even;" style="height: auto; margin: 5px" (click)="goToStudentDetail(item)">
+          <div class="container col-12 row justify-content-center align-items-center">
+            <div class="col-6" [ngClass]="{'lesson-title': even, 'lesson-title-poor': !even}">
+              <h1 align="center">{{item}} - <span *ngIf="even">98%</span><span *ngIf="!even">48%</span></h1>
+            </div>
+          </div>
+        </mat-list-item>
+    </mat-list>
+  </div>
+</div>

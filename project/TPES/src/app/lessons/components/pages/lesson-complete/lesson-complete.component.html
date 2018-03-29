@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+<div class="row col-12 align-items-center justify-content-center">
+  <h1 align="center" *ngIf="class === 'javascript'">Lesson 1: Javascript Syntax Complete!</h1>
+  <h1 align="center" *ngIf="class === 'css'">Lesson 1: CSS Attributes Complete!</h1>
+  <h1 align="center" *ngIf="class === 'html'">Lesson 1: HTML Tags Complete!</h1>
+</div>
+<div class="row col-12 align-items-center justify-content-center">
+  <h1 align="center">Your score: <span style="color: green">100%!</span></h1>
+</div>
+<div class="row col-12 align-items-center justify-content-center">
+  <h1 align="center">Click the stick figure to return to lessons!
+  </h1>
+</div>
+<div class="row col-12 align-items-center justify-content-center" style="height: 70vh">
+  <img src="/assets/thumbs-up.png" height="100%" (click)="returnToLessonList()">
+</div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-lesson-detail-detail',
@@ -11,10 +11,7 @@ export class LessonDetailDetailComponent implements OnInit {
 
   form: FormGroup;
   class = '';
-  typeError = false;
-  semicolonError = false;
-  wrongVariableName = false;
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.route.paramMap
@@ -46,11 +43,9 @@ export class LessonDetailDetailComponent implements OnInit {
     } else if (!includesEquals) {
       this.form.get('userCode').setErrors({'equals': true});
       return;
+    } else {
+      this.router.navigate(['/lessons', this.class, 'complete']);
     }
-
-    console.log(this.typeError);
-    console.log(this.semicolonError);
-    console.log(this.wrongVariableName);
   }
 
   get userCode() {

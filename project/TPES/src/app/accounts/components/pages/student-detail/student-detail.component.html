@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+
+<div class="col-12 align-items-center justify-content-center" style="height: 80vh">
+  <div class="container col-6">
+    <mat-form-field>
+      <mat-select (selectionChange)="changeClassFilter($event.value)" [value]="class">
+        <mat-option [value]="'javascript'">Javascript</mat-option>
+        <mat-option [value]="'css'">CSS</mat-option>
+        <mat-option [value]="'html'">HTML</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="container col-6">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <h3>{{name}}</h3>
+        </mat-card-title>
+        <mat-card-subtitle>
+          Student Portfolio
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row">
+          <mat-list>
+            <mat-list-item>Quiz Scores:</mat-list-item>
+            <ng-container *ngIf="class === 'javascript'">
+              <mat-list-item *ngFor="let grade of javascript_grades">
+            <span [ngClass]="{'poor': grade.grade < 60, 'average': grade.grade > 59 && grade.grade < 80, 'good': grade.grade > 79}">
+              {{grade.name}} - {{grade.grade}}%
+            </span>
+              </mat-list-item>
+            </ng-container>
+            <ng-container *ngIf="class === 'css'">
+              <mat-list-item *ngFor="let grade of css_grades">
+            <span [ngClass]="{'poor': grade.grade < 60, 'average': grade.grade > 59 && grade.grade < 80, 'good': grade.grade > 79}">
+              {{grade.name}} - {{grade.grade}}%
+            </span>
+              </mat-list-item>
+            </ng-container>
+            <ng-container *ngIf="class === 'html'">
+              <mat-list-item *ngFor="let grade of html_grades">
+            <span [ngClass]="{'poor': grade.grade < 60, 'average': grade.grade > 59 && grade.grade < 80, 'good': grade.grade > 79}">
+              {{grade.name}} - {{grade.grade}}%
+            </span>
+              </mat-list-item>
+            </ng-container>
+          </mat-list>
+          <mat-list>
+            <mat-list-item>Lesson Completion:</mat-list-item>
+            <mat-list-item *ngIf="class === 'javascript'">4 Classes completed</mat-list-item>
+            <mat-list-item *ngIf="class === 'javascript'">Average Score: 80%</mat-list-item>
+            <mat-list-item *ngIf="class === 'css'">3 Classes completed</mat-list-item>
+            <mat-list-item *ngIf="class === 'css'">Average Score: 74%</mat-list-item>
+            <mat-list-item *ngIf="class === 'html'">4 Classes completed</mat-list-item>
+            <mat-list-item *ngIf="class === 'html'">Average Score: 58%</mat-list-item>
+          </mat-list>
+        </div>
+        <div class="row">
+
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

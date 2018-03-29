@@ -1,0 +1,15 @@
+.lesson-title, .lesson-title-poor {
+  border-radius: 5px;
+  border-style: solid;
+  cursor: pointer;
+}
+
+.lesson-title {
+  background-color: lightgreen;
+  border-color: green;
+}
+
+.lesson-title-poor {
+  background-color: lightcoral;
+  border-color: red;
+}

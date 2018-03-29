@@ -14,6 +14,7 @@ import { LessonListComponent } from './components/pages/lesson-list/lesson-list.
 import {BaseModule} from '../base/base.module';
 import { LessonDetailComponent } from './components/pages/lesson-detail/lesson-detail.component';
 import { LessonDetailDetailComponent } from './components/pages/lesson-detail-detail/lesson-detail-detail.component';
+import { LessonCompleteComponent } from './components/pages/lesson-complete/lesson-complete.component';
 
 @NgModule({
   imports: [
@@ -32,7 +33,8 @@ import { LessonDetailDetailComponent } from './components/pages/lesson-detail-de
   declarations: [
     LessonListComponent,
     LessonDetailComponent,
-    LessonDetailDetailComponent
+    LessonDetailDetailComponent,
+    LessonCompleteComponent
   ]
 })
 export class LessonsModule { }
