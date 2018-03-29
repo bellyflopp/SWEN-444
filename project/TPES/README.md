@@ -1,27 +1,58 @@
-# TPES
+# The Programming Education System/Tide Pod Education System
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
+The programming education system (TPES) will teach middle school students the basics of programming. This service will offer comprehensive lessons and activities allowing students to acquire basic programming skills through an interactive medium as opposed to many current static-based lessons offered. TPES aims to peek interest in programming at a younger age and replace the non-interactive forms of self-education programming lessons, by presenting lessons in as easy-to-understand, immersive form factor that will allow any student to pick up and begin learning.
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-## Code scaffolding
+### Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+What you need to have before being able to use this project.
 
-## Build
+* [Node.js](https://nodejs.org/en/download/)
+* [Npm](https://www.npmjs.com/get-npm)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+### Installing
 
-## Running unit tests
+A step by step series of examples that tell you have to get a development env running
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To get started, open a terminal window and run the following commands:
 
-## Running end-to-end tests
+```bash
+npm install -g @angular/cli
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+After doing all this, you will have installed the Angular CLI on your computer globally
 
-## Further help
+Now, you'll want to navigate into the TPES directory and run the application locally:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```bash
+ng serve
+```
+
+If there are no errors, you can navigate to `localhost:4200` on your browser to view the application.
+
+## Built With
+
+* [Node.js](https://nodejs.org/en/download/)
+* [Npm](https://www.npmjs.com/get-npm)
+* [Angular](https://angular.io)
+
+## Versioning
+
+We used [Git](https://git-scm.com) for versioning. 
+
+## Authors
+
+* **Chris Lim**
+* **Kyle Kaniecki**
+* **Justin Liu**
+
+## Unsupported Features and Bugs:
+### Unsupported Features:
+* We will not be supporting a register feature. Accounts will be provided by a System Administrator.
+
+### WIP:
+* Not many graphics. We do not have a graphics designer.
+* Lessons are not fully fleshed out.
