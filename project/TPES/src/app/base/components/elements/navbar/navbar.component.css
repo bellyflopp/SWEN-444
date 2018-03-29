@@ -4,6 +4,7 @@
 }
 
 mat-toolbar.navbar {
+  height: 40px;
   width: 100%;
   margin-top: 0;
   margin-left: 0;

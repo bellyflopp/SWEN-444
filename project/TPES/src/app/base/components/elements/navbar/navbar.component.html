@@ -1,12 +1,14 @@
 <mat-toolbar class="navbar" [color]="'primary'">
   <span>
-    <button mat-flat-button [routerLink]="['/']">TPES</button>
+    <button mat-flat-button [routerLink]="['/lessons']">TPES</button>
   </span>
   <span *ngIf="isStaff">
     <button mat-flat-button [routerLink]="['/teacher-console']">Dashboard</button>
   </span>
   <span>
-    <button mat-flat-button [routerLink]="['/lessons']">Lessons</button>
+    <ng-container *ngIf="isLoggedIn">
+      <button mat-button [routerLink]="['/lessons']">Lessons</button>
+    </ng-container>
   </span>
   <!-- This fills the remaining space of the current row -->
   <span class="filler"></span>
@@ -20,7 +22,7 @@
     </ng-container>
     <ng-container *ngIf="!isLoggedIn">
       <button mat-button (click)="goToLoginPage()">Login</button>
-      <button mat-button (click)="goToRegisterPage()">Register</button>
+      <!-- <button mat-button (click)="goToRegisterPage()">Register</button> -->
     </ng-container>
   </span>
 </mat-toolbar>

@@ -1,3 +1,39 @@
 button.mat-raised-button {
   margin: 5px;
 }
+
+.tileImg {
+  height: 60%;
+  width: 35%;
+  float: left;
+}
+
+#css {
+  width: 25%;
+  margin-left: 15px;
+}
+
+#website {
+  margin-left: 15px;
+}
+
+mat-grid-tile button {
+  height: 75%;
+  width: 90%;
+  border-radius: 12px;
+  box-shadow: 5px 5px #888888;
+  padding-right: 15px;
+}
+
+mat-grid-tile button:focus {
+  outline: 0;
+}
+
+mat-grid-tile button:hover {
+  background-color: #F5F5F5;
+}
+
+mat-grid-tile button:active {
+  box-shadow: 3px 3px #696969;
+  transform: translateY(4px);
+}
