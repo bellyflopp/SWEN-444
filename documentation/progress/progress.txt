@@ -35,3 +35,9 @@ Justin Liu
 - Held our weekly meeting in project rooms to discuss and complete Deliverable 4
 - Created detailed design using MarvelApp
 - Starting to code in Angular for our prototype
+
+3-29-18:
+- Completed High Fidelity prototype
+- Released v0.0.0 on AWS
+- Released v0.0.0 on Heroku
+- [Live project](https://tpes.herokuapp.com/login)
