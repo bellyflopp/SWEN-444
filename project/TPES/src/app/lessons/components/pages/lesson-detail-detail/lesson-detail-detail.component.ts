@@ -11,6 +11,7 @@ export class LessonDetailDetailComponent implements OnInit {
 
   form: FormGroup;
   class = '';
+  hintUsed = false;
   constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
@@ -46,6 +47,11 @@ export class LessonDetailDetailComponent implements OnInit {
     } else {
       this.router.navigate(['/lessons', this.class, 'complete']);
     }
+  }
+
+
+  useHint() {
+    this.hintUsed = true;
   }
 
   get userCode() {

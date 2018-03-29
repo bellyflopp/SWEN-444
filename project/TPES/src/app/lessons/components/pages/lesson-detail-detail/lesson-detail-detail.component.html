@@ -10,12 +10,12 @@
       <mat-card-header>
         <mat-card-title>
           <h3 *ngIf="class === 'javascript'">Javascript Variables</h3>
-          <h3 *ngIf="class === 'css'">Javascript Variables</h3>
+          <h3 *ngIf="class === 'css'">CSS Syntax</h3>
           <h3 *ngIf="class === 'html'">HTML Tags</h3>
         </mat-card-title>
         <mat-card-subtitle>
           <span *ngIf="class === 'javascript'">Working with dynamic data</span>
-          <span *ngIf="class === 'css'">Working with dynamic data</span>
+          <span *ngIf="class === 'css'">How CSS works</span>
           <span *ngIf="class === 'html'">HTML basics</span>
         </mat-card-subtitle>
       </mat-card-header>
@@ -35,10 +35,21 @@
           <p>And remembers, <b>ALL</b> Javscript code statements end in a semicolon!</p>
         </ng-container>
         <ng-container *ngIf="class === 'css'">
-
+          <p>CSS, also known as Cascading Style Sheets, is a way for you to style your webpages in a clean manner</p>
+          <p>CSS has what are known as 'classes', which tell CSS what styles to apply and where.</p>
+          <code>{{".myStyle { color: red;}"}}</code>
+          <p>
+            There are a lot of other attributes you can declare too, but we will get into those in the next lesson.
+          </p>
+          <p>For now, just know that you need to include braces around all of the classes you right</p>
         </ng-container>
         <ng-container *ngIf="class === 'html'">
-
+          <p>HTML, also known as Hypertext Markup Language, is the <i>structure</i> of your website</p>
+          <p>It determines what items are placed on the page, and in what order</p>
+          <p>
+            HTML tags contain classes, which is how you apply your css to your structure.
+          </p>
+          <p>For example, if you hit F12 on your keyboard right now, you will be able to see the HTML of this page!</p>
         </ng-container>
       </mat-card-content>
     </mat-card>
@@ -52,25 +63,30 @@
       </mat-card-header>
       <mat-card-content>
         <ng-container *ngIf="class === 'javascript'">
-          <p>Try creating variables below. Create a variable called 'temp' and initialize it to 0.</p>
+          <p>Try to create a variable below. Create a variable called 'temp' and initialize it to 0.</p>
           <div style="display: flex; flex-direction: row" *ngIf="form">
-            <form [formGroup]="form">
-              <mat-form-field>
+            <form [formGroup]="form" style="width: 75%">
+              <mat-form-field style="width: 100%">
                 <input matInput [placeholder]="'Your code'" [formControlName]="'userCode'">
+                <mat-hint align="start" *ngIf="hintUsed"><strong>Start with 'var', and always end with a semi-colon</strong></mat-hint>
+                <mat-error *ngIf="userCode.hasError('required')">
+                  You must type some code
+                </mat-error>
                 <mat-error *ngIf="userCode.hasError('endsWith')">
-                  You must include a semicolon at the end of your statement!
+                  You must include a semicolon at the end of your statement
                 </mat-error>
                 <mat-error *ngIf="userCode.hasError('startsWith')">
-                  You forgot to begin your statement with 'var'!
+                  You forgot to begin your statement with 'var'
                 </mat-error>
                 <mat-error *ngIf="userCode.hasError('variableName')">
-                  You didn't name your variable 'temp'!
+                  You didn't name your variable 'temp'
                 </mat-error>
                 <mat-error *ngIf="userCode.hasError('equals')">
-                  You forgot the equals sign!
+                  You forgot the equals sign
                 </mat-error>
               </mat-form-field>
             </form>
+            <button mat-raised-button [color]="'accent'" (click)="useHint()" style="margin-left: 10px" [disabled]="hintUsed">Hint</button>
             <button mat-raised-button [color]="'primary'" (click)="submitCode()" style="margin-left: 10px">Submit</button>
           </div>
         </ng-container>
