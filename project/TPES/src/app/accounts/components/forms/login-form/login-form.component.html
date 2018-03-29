@@ -7,11 +7,14 @@
   </mat-form-field>
   <br/>
   <mat-form-field style="margin-top: 15px; width: 100%">
-    <input matInput [placeholder]="'Password'" formControlName="password">
+    <input matInput type="password" [placeholder]="'Password'" formControlName="password">
     <mat-error *ngIf="password.hasError('required')">
       You must enter a password!
     </mat-error>
   </mat-form-field>
+  <mat-error class="invalidLogin" *ngIf="form.hasError('invalid')">
+      Invalid username/password. Please try again.
+  </mat-error>
 </form>
 <div style="text-align: center;">
   <button mat-raised-button class="loginBtn" [color]="'primary'" (click)="submitForm()" [disabled]="!form.valid">Login</button>

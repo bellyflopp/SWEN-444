@@ -30,6 +30,8 @@ export class LoginFormComponent implements OnInit {
       .subscribe(token => {
         if (token) {
           this.router.navigate(['/lessons']);
+        } else {
+          this.form.setErrors({"invalid": true})
         }
       });
   }
