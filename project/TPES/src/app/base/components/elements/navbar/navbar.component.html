@@ -2,6 +2,9 @@
   <span>
     <button mat-flat-button [routerLink]="['/']">TPES</button>
   </span>
+  <span *ngIf="isStaff">
+    <button mat-flat-button [routerLink]="['/teacher-console']">Dashboard</button>
+  </span>
   <span>
     <button mat-flat-button [routerLink]="['/lessons']">Lessons</button>
   </span>

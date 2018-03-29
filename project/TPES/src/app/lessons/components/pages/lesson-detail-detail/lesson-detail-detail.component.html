@@ -1,6 +1,8 @@
 <app-navbar></app-navbar>
 <div class="row col-12 align-items-center justify-content-center">
-  <h1 align="center">Lesson 1: Javascript Syntax</h1>
+  <h1 align="center" *ngIf="class === 'javascript'">Lesson 1: Javascript Syntax</h1>
+  <h1 align="center" *ngIf="class === 'css'">Lesson 1: CSS Attributes</h1>
+  <h1 align="center" *ngIf="class === 'html'">Lesson 1: HTML Tags</h1>
 </div>
 <div class="row col-12 align-items-center justify-content-center" style="margin-top: 10px; height: 60vh">
   <div class="container col-6 align-items-center justify-content-center">
@@ -12,22 +14,32 @@
           <h3 *ngIf="class === 'html'">HTML Tags</h3>
         </mat-card-title>
         <mat-card-subtitle>
-          Working with dynamic data
+          <span *ngIf="class === 'javascript'">Working with dynamic data</span>
+          <span *ngIf="class === 'css'">Working with dynamic data</span>
+          <span *ngIf="class === 'html'">HTML basics</span>
         </mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
-        <p>To create a variable in Javascript, you will need to "declare" the variable.</p>
-        <code>var x = 0;</code>
-        <p>
-          There are also other ariables that you can declare other than numbers. To declare a list of objects, use
-          an array object.
-        </p>
-        <code>var myList = [];</code>
-        <p>
-          You can also statically declare strings in javascript. You do it like this.
-        </p>
-        <code>var myString = "Hello, world!";</code>
-        <p>And remembers, <b>ALL</b> Javscript code statements end in a semicolon!</p>
+        <ng-container *ngIf="class === 'javascript'">
+          <p>To create a variable in Javascript, you will need to "declare" the variable.</p>
+          <code>var x = 0;</code>
+          <p>
+            There are also other ariables that you can declare other than numbers. To declare a list of objects, use
+            an array object.
+          </p>
+          <code>var myList = [];</code>
+          <p>
+            You can also statically declare strings in javascript. You do it like this.
+          </p>
+          <code>var myString = "Hello, world!";</code>
+          <p>And remembers, <b>ALL</b> Javscript code statements end in a semicolon!</p>
+        </ng-container>
+        <ng-container *ngIf="class === 'css'">
+
+        </ng-container>
+        <ng-container *ngIf="class === 'html'">
+
+        </ng-container>
       </mat-card-content>
     </mat-card>
   </div>
@@ -61,6 +73,12 @@
             </form>
             <button mat-raised-button [color]="'primary'" (click)="submitCode()" style="margin-left: 10px">Submit</button>
           </div>
+        </ng-container>
+        <ng-container *ngIf="class === 'css'">
+
+        </ng-container>
+        <ng-container *ngIf="class === 'html'">
+
         </ng-container>
       </mat-card-content>
     </mat-card>
