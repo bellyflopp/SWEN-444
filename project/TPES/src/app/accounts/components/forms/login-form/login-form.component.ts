@@ -29,7 +29,7 @@ export class LoginFormComponent implements OnInit {
     this.authService.login(this.form.get('username').value, this.form.get('password').value)
       .subscribe(token => {
         if (token) {
-          this.router.navigate(['/']);
+          this.router.navigate(['/lessons']);
         }
       });
   }
