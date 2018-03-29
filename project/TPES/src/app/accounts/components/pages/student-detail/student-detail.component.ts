@@ -22,10 +22,10 @@ export class StudentDetailComponent implements OnInit {
     {name: 'CSS Colors', grade: 56},
   ];
   html_grades = [
-    {name: 'HTML Structure', grade: 58},
-    {name: 'Javscript Variables', grade: 62},
-    {name: 'Javscript Operations', grade: 57},
-    {name: 'Javscript Functions', grade: 56},
+    {name: 'HTML Tags', grade: 58},
+    {name: 'HTML div Tag', grade: 62},
+    {name: 'HTML Lists', grade: 57},
+    {name: 'HTML Images', grade: 56},
   ];
   constructor(private route: ActivatedRoute) { }
 

@@ -1,5 +1,6 @@
 @import '~@angular/material/theming';
 
+@include mat-core();
 
 @mixin mat-icon-size($size: 24px) {
   font-size: $size;

@@ -4,23 +4,28 @@ import {LessonListComponent} from './components/pages/lesson-list/lesson-list.co
 import {LessonDetailComponent} from './components/pages/lesson-detail/lesson-detail.component';
 import {LessonDetailDetailComponent} from './components/pages/lesson-detail-detail/lesson-detail-detail.component';
 import {LessonCompleteComponent} from './components/pages/lesson-complete/lesson-complete.component';
+import { AuthguardGuard } from '../accounts/guards/authguard.guard';
 
 const lessonsRoutes: Routes = [
   {
     path: '',
-    component: LessonListComponent
+    component: LessonListComponent,
+    canActivate: [AuthguardGuard]
   },
   {
     path: ':type',
-    component: LessonDetailComponent
+    component: LessonDetailComponent,
+    canActivate: [AuthguardGuard]
   },
   {
     path: ':type/details',
-    component: LessonDetailDetailComponent
+    component: LessonDetailDetailComponent,
+    canActivate: [AuthguardGuard]
   },
   {
     path: ':type/complete',
-    component: LessonCompleteComponent
+    component: LessonCompleteComponent,
+    canActivate: [AuthguardGuard]
   }
 ];
 

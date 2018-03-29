@@ -12,6 +12,7 @@ import {BaseModule} from './base/base.module';
 import {AuthenticationService} from './accounts/services/authentication.service';
 import {AccountsModule} from './accounts/accounts.module';
 import {HomeComponent} from './base/components/pages/home/home.component';
+import { AuthguardGuard } from './accounts/guards/authguard.guard';
 
 
 export function getToken() {
@@ -49,7 +50,8 @@ export function getToken() {
     })
   ],
   providers: [
-    AuthenticationService
+    AuthenticationService,
+    AuthguardGuard
   ],
   bootstrap: [AppComponent]
 })

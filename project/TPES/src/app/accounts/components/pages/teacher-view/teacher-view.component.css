@@ -6,11 +6,7 @@ button.mat-raised-button {
   height: 60%;
   width: 35%;
   float: left;
-}
-
-#css {
-  width: 25%;
-  margin-left: 15px;
+  margin-left: 10px;
 }
 
 #website {
@@ -22,7 +18,7 @@ mat-grid-tile button {
   width: 90%;
   border-radius: 12px;
   box-shadow: 5px 5px #888888;
-  padding-right: 15px;
+  padding: 20px;
 }
 
 mat-grid-tile button:focus {

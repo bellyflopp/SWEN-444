@@ -1,8 +1,20 @@
+.background {
+  height: 100%;
+  width: 100%;
+  position: absolute; 
+  top: 0; 
+  left: 0;
+
+  background-image: url('../../../../../assets/background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .login-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
 }
 
 .login-title {
@@ -10,6 +22,9 @@
   width: 50vw;
   justify-content: center;
   align-items: center;
+
+  font-size: 1.5em;
+  /* color: #3F51B5; */
 
   display: -webkit-box;
   -webkit-box-orient: vertical;

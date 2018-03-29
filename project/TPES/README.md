@@ -4,9 +4,11 @@ The programming education system (TPES) will teach middle school students the ba
 
 ## Getting Started
 
-Navigate [here](http://tide-pod-education-system.s3-website-us-east-1.amazonaws.com/) view The Programming Education System.
+Navigate [here](http://tide-pod-education-system.s3-website-us-east-1.amazonaws.com/) to view The Programming Education System.
 
 To run locally follow the instructions below. These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+Note: Please run fullscreen at 100% for optimal user experience
 
 ### Prerequisites
 

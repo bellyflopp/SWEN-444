@@ -6,6 +6,7 @@ import {RegisterComponent} from './components/pages/register/register.component'
 import {TeacherViewComponent} from './components/pages/teacher-view/teacher-view.component';
 import {ClassDetailComponent} from './components/pages/class-detail/class-detail.component';
 import {StudentDetailComponent} from './components/pages/student-detail/student-detail.component';
+import { AuthguardGuard } from './guards/authguard.guard';
 
 
 const accountsRoutes: Routes = [
@@ -14,20 +15,19 @@ const accountsRoutes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'register',
-    component: RegisterComponent
-  },
-  {
     path: 'teacher-console',
-    component: TeacherViewComponent
+    component: TeacherViewComponent,
+    canActivate: [AuthguardGuard]
   },
   {
     path: 'teacher-console/:class',
-    component: ClassDetailComponent
+    component: ClassDetailComponent,
+    canActivate: [AuthguardGuard]
   },
   {
     path: 'student/:name',
-    component: StudentDetailComponent
+    component: StudentDetailComponent,
+    canActivate: [AuthguardGuard]
   }
 ];
 
