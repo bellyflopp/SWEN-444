@@ -1,39 +1,30 @@
 <app-navbar></app-navbar>
 <div class="container col-md-12">
-  <mat-grid-list [cols]="4">
+  <mat-grid-list [cols]="2" rowHeight="225" gutterSize="50">
     <mat-grid-tile>
-      <img src="/assets/JavaScript-logo.png" style="width: 100%; height: 100%">
-      <mat-grid-tile-footer>
-        <button mat-raised-button [color]="'primary'">Join Course</button>
-        <button mat-raised-button [color]="'primary'" [routerLink]="['javascript']">Details</button>
-        <h1 style="margin-left: 10px; float: right">Bring your website to life with Javascript!</h1>
-      </mat-grid-tile-footer>
+      <button [routerLink]="['javascript']">
+        <img class="tileImg" src="/assets/JavaScript-logo.png">
+        <h2 style="margin-left: 10px; text-align: right">Bring your website to life with Javascript</h2>
+      </button>
     </mat-grid-tile>
     <mat-grid-tile>
-      <img src="/assets/HTML-logo.png" style="width: 100%; height: 100%">
-      <mat-grid-tile-footer>
-        <button mat-raised-button [color]="'primary'">Join Course</button>
-        <button mat-raised-button [color]="'primary'" [routerLink]="['html']">Details</button>
-        <h1 style="margin-left: 10px; float: right">Create the structure of your website!</h1>
-      </mat-grid-tile-footer>
+      <button [routerLink]="['html']">
+        <img class="tileImg" src="/assets/HTML-logo.png">
+        <h2 style="margin-left: 10px; text-align: right">Create the structure of your website with HTML</h2>
+      </button>
     </mat-grid-tile>
-    <mat-grid-tile>
-      <img src="/assets/CSS3-logo.png" style="width: 100%; height: 100%">
-      <mat-grid-tile-footer>
-        <button mat-raised-button [color]="'primary'">Join Course</button>
-        <button mat-raised-button [color]="'primary'" [routerLink]="['css']">Details</button>
-        <h1 style="margin-left: 10px; float: right">Learn to style your components with CSS3!</h1>
-      </mat-grid-tile-footer>
+    <mat-grid-tile style="margin-top: -75px">
+      <button [routerLink]="['css']">
+        <img id="css" class="tileImg" src="/assets/CSS3-logo.png">
+        <h2 style="margin-left: 10px; text-align: right">Style your website with CSS</h2>
+      </button>
     </mat-grid-tile>
-    <mat-grid-tile>
-      <img src="/assets/html_css_js.png" style="width: 100%; height: 100%">
-      <mat-grid-tile-footer>
-        <div matTooltip="You must complete the other courses first!">
-          <button mat-raised-button [color]="'primary'" [disabled]="true">Join Course</button>
-          <button mat-raised-button [color]="'primary'" [routerLink]="['website']">Details</button>
-        </div>
-        <h1 style="margin-left: 10px; float: right">Build your own website!</h1>
-      </mat-grid-tile-footer>
+    <mat-grid-tile style="margin-top: -75px">
+      <button [routerLink]="['website']">
+          <img id="website" class="tileImg" src="/assets/html_css_js.png">
+          <div matTooltip="You must complete the other courses first!"></div>          
+          <h2 style="margin-left: 10px; text-align: right">Build your own website</h2>
+      </button>
     </mat-grid-tile>
   </mat-grid-list>
 </div>
