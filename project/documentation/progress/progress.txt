@@ -35,3 +35,7 @@ Justin Liu
 - Held our weekly meeting in project rooms to discuss and complete Deliverable 4
 - Created detailed design using MarvelApp
 - Starting to code in Angular for our prototype
+
+4-16-18
+- Put together interview responses
+- Held weekly meeting in library and put together raw test data and test analysis
