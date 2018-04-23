@@ -8,7 +8,7 @@
       </ng-container>
   </span>
   <span *ngIf="isStaff">
-    <button mat-flat-button [routerLink]="['/teacher-console']">Dashboard</button>
+    <button mat-flat-button [routerLink]="['/teacher-console']">Classes</button>
   </span>
   <span>
     <ng-container *ngIf="isLoggedIn && !isStaff">
