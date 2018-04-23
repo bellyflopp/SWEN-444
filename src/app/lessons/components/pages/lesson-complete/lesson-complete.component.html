@@ -8,9 +8,13 @@
   <h1 align="center">Your score: <span style="color: green">100%!</span></h1>
 </div>
 <div class="row col-12 align-items-center justify-content-center">
-  <h1 align="center">Click the stick figure to return to lessons!
-  </h1>
+  <!-- <h1 align="center">Click the stick figure to return to lessons!
+  </h1> -->
 </div>
-<div class="row col-12 align-items-center justify-content-center" style="height: 70vh">
-  <img src="/assets/thumbs-up.png" height="100%" (click)="returnToLessonList()">
+<div class="row col-12 align-items-center justify-content-center" style="height: 50vh">
+  <img src="/assets/thumbs-up.png" height="75%" >
+</div>
+<div class="row col-12 align-items-center justify-content-center">
+  <button mat-flat-button [routerLink]="['/lessons']" style="margin-right: 100px;">Lessons</button>
+  <button mat-flat-button (click)="returnToLessonList()" style="margin-left: 100px;">Topics</button>
 </div>

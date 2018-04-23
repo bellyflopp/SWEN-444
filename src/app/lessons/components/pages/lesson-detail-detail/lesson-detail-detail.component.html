@@ -67,7 +67,7 @@
           <div style="display: flex; flex-direction: row" *ngIf="form">
             <form [formGroup]="form" style="width: 75%">
               <mat-form-field style="width: 100%">
-                <input matInput [placeholder]="'Your code'" [formControlName]="'userCode'">
+                <input matInput [placeholder]="'Your code'" [formControlName]="'userCode'" autocomplete="off">
                 <mat-hint align="start" *ngIf="hintUsed"><strong>Start with 'var', and always end with a semi-colon</strong></mat-hint>
                 <mat-error *ngIf="userCode.hasError('required')">
                   You must type some code
