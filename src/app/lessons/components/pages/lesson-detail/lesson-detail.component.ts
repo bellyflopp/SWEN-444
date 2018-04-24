@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
+import {LessonsService} from '../../../services/lessons.service';
+import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'app-lesson-detail',
@@ -9,41 +11,41 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class LessonDetailComponent implements OnInit {
 
   type = '';
-  javascript_items = [
-    'Javascript Syntax',
-    'Javascript Comments',
-    'Javascript Datatypes',
-    'Javascript Operations',
-    'Javascript Functions',
-    'Javascript Objects'
-  ];
-  css_items = [
-    'CSS Syntax',
-    'CSS Attributes',
-    'CSS Colors',
-    'CSS Classes',
-    'CSS Media Selectors',
-    'Advanced CSS Attributes'
-  ];
-  html_items = [
-    'HTML Tags',
-    'HTML div Tag',
-    'HTML Lists',
-    'HTML Images'
-  ];
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  javascript_items = [];
+  css_items = [];
+  html_items = [];
+  completed_lessons = [];
+  constructor(private route: ActivatedRoute, private router: Router, private lessonsService: LessonsService) { }
 
   ngOnInit() {
     this.route.paramMap
       .subscribe(params => {
         this.type = params.get('type');
       });
+
+    this.completed_lessons = this.lessonsService.getCompletedLessons();
+
+    this.lessonsService.getJavascriptLessons()
+      .switchMap(lessons => {
+        this.javascript_items = lessons;
+        return this.lessonsService.getCssLessons();
+      })
+      .switchMap(lessons => {
+        this.css_items = lessons;
+        return this.lessonsService.getHtmlLessons();
+      })
+      .subscribe(lessons => {
+        this.html_items = lessons;
+      });
+
   }
 
-  goToLessonDetailDetail(first: boolean) {
-    if (first) {
-      this.router.navigate(['/lessons', this.type, 'details']);
-    }
+  lessonCompleted(lesson: string): boolean {
+    return this.completed_lessons.findIndex(item => item === lesson) > -1;
+  }
+
+  goToLessonDetailDetail(lesson: string) {
+      this.router.navigate(['/lessons', this.type, lesson, 'details']);
   }
 
 }

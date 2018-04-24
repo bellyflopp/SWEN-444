@@ -15,39 +15,39 @@
   <div class="col-12">
     <mat-list>
       <ng-container *ngIf="type==='javascript'">
-        <mat-list-item *ngFor="let item of javascript_items; let first = first;" style="height: auto; margin: 5px" (click)="goToLessonDetailDetail(first)">
+        <mat-list-item *ngFor="let item of javascript_items; let first = first;" style="height: auto; margin: 5px" (click)="goToLessonDetailDetail(item)">
           <div class="container col-12 row justify-content-center align-items-center">
             <div class="col-1">
-              <mat-icon *ngIf="first" class="big-icon" [ngClass]="{'done': first, 'not-done': !first}">check_circle</mat-icon>
-              <mat-icon *ngIf="!first" class="big-icon" [ngClass]="{'done': first, 'not-done': !first}">remove_circle</mat-icon>
+              <mat-icon *ngIf="lessonCompleted(item)" class="big-icon" [ngClass]="{'done': lessonCompleted(item), 'not-done':!lessonCompleted(item) }">check_circle</mat-icon>
+              <mat-icon *ngIf="!lessonCompleted(item)" class="big-icon" [ngClass]="{'done': lessonCompleted(item), 'not-done': !lessonCompleted(item)}">remove_circle</mat-icon>
             </div>
-            <div class="col-11" [ngClass]="{'lesson-title': first, 'lesson-title-disabled': !first}">
+            <div class="col-11" [ngClass]="{'lesson-title': lessonCompleted(item), 'lesson-title-disabled': !lessonCompleted(item)}">
               <h1 align="center">{{item}}</h1>
             </div>
           </div>
         </mat-list-item>
       </ng-container>
       <ng-container *ngIf="type==='css'">
-        <mat-list-item *ngFor="let item of css_items; let first = first;" style="height: auto; margin: 5px" (click)="goToLessonDetailDetail(first)">
+        <mat-list-item *ngFor="let item of css_items; let first = first;" style="height: auto; margin: 5px" (click)="goToLessonDetailDetail(item)">
           <div class="container col-12 row justify-content-center align-items-center">
             <div class="col-1">
-              <mat-icon *ngIf="first" class="big-icon" [ngClass]="{'done': first, 'not-done': !first}">check_circle</mat-icon>
-              <mat-icon *ngIf="!first" class="big-icon" [ngClass]="{'done': first, 'not-done': !first}">remove_circle</mat-icon>
+              <mat-icon *ngIf="lessonCompleted(item)" class="big-icon" [ngClass]="{'done': lessonCompleted(item), 'not-done': !lessonCompleted(item)}">check_circle</mat-icon>
+              <mat-icon *ngIf="!lessonCompleted(item)" class="big-icon" [ngClass]="{'done': lessonCompleted(item), 'not-done': !lessonCompleted(item)}">remove_circle</mat-icon>
             </div>
-            <div class="col-11" [ngClass]="{'lesson-title': first, 'lesson-title-disabled': !first}">
+            <div class="col-11" [ngClass]="{'lesson-title': lessonCompleted(item), 'lesson-title-disabled': !lessonCompleted(item)}">
               <h1 align="center">{{item}}</h1>
             </div>
           </div>
         </mat-list-item>
       </ng-container>
       <ng-container *ngIf="type==='html'">
-        <mat-list-item *ngFor="let item of html_items; let first = first;" style="height: auto; margin: 5px" (click)="goToLessonDetailDetail(first)">
+        <mat-list-item *ngFor="let item of html_items; let first = first;" style="height: auto; margin: 5px" (click)="goToLessonDetailDetail(item)">
           <div class="container col-12 row justify-content-center align-items-center">
             <div class="col-1">
-              <mat-icon *ngIf="first" class="big-icon" [ngClass]="{'done': first, 'not-done': !first}">check_circle</mat-icon>
-              <mat-icon *ngIf="!first" class="big-icon" [ngClass]="{'done': first, 'not-done': !first}">remove_circle</mat-icon>
+              <mat-icon *ngIf="lessonCompleted(item)" class="big-icon" [ngClass]="{'done': lessonCompleted(item), 'not-done': !lessonCompleted(item)}">check_circle</mat-icon>
+              <mat-icon *ngIf="!lessonCompleted(item)" class="big-icon" [ngClass]="{'done': lessonCompleted(item), 'not-done': !lessonCompleted(item)}">remove_circle</mat-icon>
             </div>
-            <div class="col-11" [ngClass]="{'lesson-title': first, 'lesson-title-disabled': !first}">
+            <div class="col-11" [ngClass]="{'lesson-title': lessonCompleted(item), 'lesson-title-disabled': !lessonCompleted(item)}">
               <h1 align="center">{{item}}</h1>
             </div>
           </div>

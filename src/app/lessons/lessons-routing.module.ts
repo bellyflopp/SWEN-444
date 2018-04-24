@@ -18,7 +18,7 @@ const lessonsRoutes: Routes = [
     canActivate: [AuthguardGuard]
   },
   {
-    path: ':type/details',
+    path: ':type/:lesson/details',
     component: LessonDetailDetailComponent,
     canActivate: [AuthguardGuard]
   },

@@ -11,7 +11,7 @@
     <button mat-flat-button [routerLink]="['/teacher-console']">Classes</button>
   </span>
   <span>
-    <ng-container *ngIf="isLoggedIn && !isStaff">
+    <ng-container *ngIf="isLoggedIn">
       <button mat-button [routerLink]="['/lessons']">Lessons</button>
     </ng-container>
   </span>

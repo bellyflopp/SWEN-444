@@ -68,7 +68,6 @@
             <form [formGroup]="form" style="width: 75%">
               <mat-form-field style="width: 100%">
                 <input matInput [placeholder]="'Your code'" [formControlName]="'userCode'" autocomplete="off">
-                <!-- <mat-hint align="start" *ngIf="hintUsed"><strong>Start with 'var', and always end with a semi-colon</strong></mat-hint> -->
                 <mat-error *ngIf="userCode.hasError('required')">
                   You must type some code
                 </mat-error>
@@ -87,14 +86,61 @@
               </mat-form-field>
             </form>
             <button mat-raised-button [color]="'accent'" (click)="useHint()" style="margin-left: 10px" [disabled]="hintUsed">Hint</button>
-            <button mat-raised-button [color]="'primary'" (click)="submitCode()" style="margin-left: 10px">Submit</button>
+            <button mat-raised-button [color]="'primary'" (click)="submitJavascriptCode()" style="margin-left: 10px">Submit</button>
           </div>
         </ng-container>
         <ng-container *ngIf="class === 'css'">
-
+          <p>Try to create a css class below. Create a class called 'myClass' and make it have a color of blue.</p>
+          <div style="display: flex; flex-direction: row" *ngIf="form">
+            <form [formGroup]="form" style="width: 75%">
+              <mat-form-field style="width: 100%">
+                <input matInput [placeholder]="'Your code'" [formControlName]="'userCode'" autocomplete="off">
+                <!-- <mat-hint align="start" *ngIf="hintUsed"><strong>Start with 'var', and always end with a semi-colon</strong></mat-hint> -->
+                <mat-error *ngIf="userCode.hasError('required')">
+                  You must type some code
+                </mat-error>
+                <mat-error *ngIf="userCode.hasError('curlyBraces')">
+                  You must wrap all attribute statements with curly braces
+                </mat-error>
+                <mat-error *ngIf="userCode.hasError('startsWith')">
+                  You forgot to begin your class definition with a period
+                </mat-error>
+                <mat-error *ngIf="userCode.hasError('className')">
+                  You didn't name your class 'myClass'
+                </mat-error>
+                <mat-error *ngIf="userCode.hasError('blue')">
+                  You didn't make the color 'blue'
+                </mat-error>
+              </mat-form-field>
+            </form>
+            <button mat-raised-button [color]="'accent'" (click)="useHint()" style="margin-left: 10px" [disabled]="hintUsed">Hint</button>
+            <button mat-raised-button [color]="'primary'" (click)="submitCssCode()" style="margin-left: 10px">Submit</button>
+          </div>
         </ng-container>
         <ng-container *ngIf="class === 'html'">
-
+          <p>Try to create a div container below. Have your div contain 'Hello World'</p>
+          <div style="display: flex; flex-direction: row" *ngIf="form">
+            <form [formGroup]="form" style="width: 75%">
+              <mat-form-field style="width: 100%">
+                <input matInput [placeholder]="'Your code'" [formControlName]="'userCode'" autocomplete="off">
+                <!-- <mat-hint align="start" *ngIf="hintUsed"><strong>Start with 'var', and always end with a semi-colon</strong></mat-hint> -->
+                <mat-error *ngIf="userCode.hasError('required')">
+                  You must type some code
+                </mat-error>
+                <mat-error *ngIf="userCode.hasError('startsTag')">
+                  You must start your container with &lt;div&gt;
+                </mat-error>
+                <mat-error *ngIf="userCode.hasError('endTag')">
+                  You must end your container with &lt;/div&gt;
+                </mat-error>
+                <mat-error *ngIf="userCode.hasError('helloWorld')">
+                  Your container didn't contain Hello World
+                </mat-error>
+              </mat-form-field>
+            </form>
+            <button mat-raised-button [color]="'accent'" (click)="useHint()" style="margin-left: 10px" [disabled]="hintUsed">Hint</button>
+            <button mat-raised-button [color]="'primary'" (click)="submitHtmlCode()" style="margin-left: 10px">Submit</button>
+          </div>
         </ng-container>
       </mat-card-content>
     </mat-card>
@@ -105,7 +151,9 @@
         </mat-card-title>
       </mat-card-header>
       <mat-card-content>
-          <p>Start with 'var', and always end with a semi-colon</p>
+        <p *ngIf="class === 'javascript'">Start with 'var', and always end with a semi-colon</p>
+        <p *ngIf="class === 'html'">Start with 'var', and always end with a semi-colon</p>
+        <p *ngIf="class === 'css'">Always start with a period in front of class names and all class attributes needs to be wrapped in curly braces</p>
       </mat-card-content>
     </mat-card>
   </div>

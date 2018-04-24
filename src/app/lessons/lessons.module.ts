@@ -15,6 +15,7 @@ import {BaseModule} from '../base/base.module';
 import { LessonDetailComponent } from './components/pages/lesson-detail/lesson-detail.component';
 import { LessonDetailDetailComponent } from './components/pages/lesson-detail-detail/lesson-detail-detail.component';
 import { LessonCompleteComponent } from './components/pages/lesson-complete/lesson-complete.component';
+import {LessonsService} from "./services/lessons.service";
 
 @NgModule({
   imports: [
@@ -35,6 +36,9 @@ import { LessonCompleteComponent } from './components/pages/lesson-complete/less
     LessonDetailComponent,
     LessonDetailDetailComponent,
     LessonCompleteComponent
+  ],
+  providers: [
+    LessonsService
   ]
 })
 export class LessonsModule { }
