@@ -16,6 +16,5 @@
 </div>
 <div class="row col-12 align-items-center justify-content-center">
   <button mat-flat-button [routerLink]="['/lessons']" style="margin-right: 100px;">Lessons List</button>
-  <button mat-flat-button [routerLink]="['/lessons', class]" style="margin-right: 100px;">{{class}} Topic List</button>
-  <button mat-flat-button (click)="returnToLessonList()">Topics</button>
+  <button mat-flat-button (click)="returnToLessonList()" style="margin-left: 100px">Topics</button>
 </div>

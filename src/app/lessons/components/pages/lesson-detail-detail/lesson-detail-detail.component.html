@@ -24,7 +24,7 @@
           <p>To create a variable in Javascript, you will need to "declare" the variable.</p>
           <code>var x = 0;</code>
           <p>
-            There are also other ariables that you can declare other than numbers. To declare a list of objects, use
+            There are also other variables that you can declare other than numbers. To declare a list of objects, use
             an array object.
           </p>
           <code>var myList = [];</code>
@@ -32,10 +32,10 @@
             You can also statically declare strings in javascript. You do it like this.
           </p>
           <code>var myString = "Hello, world!";</code>
-          <p>And remembers, <b>ALL</b> Javscript code statements end in a semicolon!</p>
+          <p>And remembers, <b>ALL</b> Javascript code statements end in a semicolon!</p>
         </ng-container>
         <ng-container *ngIf="class === 'css'">
-          <p>CSS, also known as Cascading Style Sheets, is a way for you to style your webpages in a clean manner</p>
+          <p>CSS, also known as Cascading Style Sheets, is a way for you to style your web pages in a clean manner</p>
           <p>CSS has what are known as 'classes', which tell CSS what styles to apply and where.</p>
           <code>{{".myStyle { color: red;}"}}</code>
           <p>
@@ -152,7 +152,7 @@
       </mat-card-header>
       <mat-card-content>
         <p *ngIf="class === 'javascript'">Start with 'var', and always end with a semi-colon</p>
-        <p *ngIf="class === 'html'">Start with 'var', and always end with a semi-colon</p>
+        <p *ngIf="class === 'html'">Always start with an opening and closing tag</p>
         <p *ngIf="class === 'css'">Always start with a period in front of class names and all class attributes needs to be wrapped in curly braces</p>
       </mat-card-content>
     </mat-card>
