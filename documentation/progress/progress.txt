@@ -36,8 +36,11 @@ Justin Liu
 - Created detailed design using MarvelApp
 - Starting to code in Angular for our prototype
 
-3-29-18:
-- Completed High Fidelity prototype
-- Released v0.0.0 on AWS
-- Released v0.0.0 on Heroku
-- [Live project](https://tpes.herokuapp.com/login)
+4-16-18
+- Put together interview responses
+- Held weekly meeting in library and put together raw test data and test analysis
+
+4-21-18
+- Created presentation for final product
+- Addressed problems found in usability testing in final prototype
+- Held weekly meeting in library
